@@ -33,5 +33,17 @@ namespace TestsForCalculator
             var actualResult = cm.Counting(transformedExpression);
             Assert.AreEqual(actualResult, expectedResult);
         }
+        [TestMethod]
+        [DataRow(2, 2, 4)]
+        [DataRow(0, 130, 0)]
+        [DataRow(4, -2, -8)]
+        public void MultiplyInteger(int firstNumber, int secondNumber, int expectedResult)
+        {
+            string inputExpression = $"{firstNumber}*{secondNumber}";
+            string transformedExpression = cm.TransformExpression(inputExpression);
+            var actualResult = cm.Counting(transformedExpression);
+            Assert.AreEqual(actualResult, expectedResult);
+        }
+        
     }
 }
