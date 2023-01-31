@@ -22,5 +22,16 @@ namespace TestsForCalculator
             var actualResult = cm.Counting(transformedExpression);
             Assert.AreEqual(actualResult, expectedResult);
         }
+        [TestMethod]
+        [DataRow(2, 2, 0)]
+        [DataRow(0, 130, -130)]
+        [DataRow(4, -2, 6)]
+        public void DividingInteger(int firstNumber, int secondNumber, int expectedResult)
+        {
+            string inputExpression = $"{firstNumber}-{secondNumber}";
+            string transformedExpression = cm.TransformExpression(inputExpression);
+            var actualResult = cm.Counting(transformedExpression);
+            Assert.AreEqual(actualResult, expectedResult);
+        }
     }
 }
