@@ -16,5 +16,13 @@ namespace HW_3.CalculatorMechanics
             }
             return false;
         }
+        private bool IsOperator(char c)
+        {
+            if ("+-/*()".IndexOf(c) != -1)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
