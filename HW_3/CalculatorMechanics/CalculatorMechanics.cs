@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HW_3.CalculatorMechanics
 {
-    internal class CalculatorMechanics
+    public class CalculatorMechanics
     {
         public string SyntaxAnalyz(string input)
         {
