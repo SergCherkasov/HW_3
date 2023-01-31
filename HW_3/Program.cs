@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            
+            UserInterface.UserInterface ui = new UserInterface.UserInterface();
+
+            ui.Calculate();
         }
     }
 }
