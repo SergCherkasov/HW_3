@@ -78,5 +78,14 @@ namespace TestsForCalculator
             string transformedExpression = cm.SyntaxAnalyz(inputExpression);
             Assert.AreEqual(transformedExpression, string.Empty);
         }
+        [TestMethod]
+        public void UnaryMinus()
+        {
+            string inputExpression = "-2*-4";
+            string transformedExpression = cm.SyntaxAnalyz(inputExpression);
+            transformedExpression = cm.TransformExpression(inputExpression);
+            var actualResult = cm.Counting(transformedExpression);
+            Assert.AreEqual(actualResult, 8);
+        }
     }
 }
