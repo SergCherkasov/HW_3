@@ -63,5 +63,13 @@ namespace TestsForCalculator
             var actualResult = cm.Counting(transformedExpression);
             Assert.AreEqual(actualResult, 4);
         }
+
+        [TestMethod]
+        public void ifDot()
+        {
+            string inputExpression = "4.3";
+            string transformedExpression = cm.SyntaxAnalyz(inputExpression);
+            Assert.AreEqual(transformedExpression,"4,3");
+        }
     }
 }
