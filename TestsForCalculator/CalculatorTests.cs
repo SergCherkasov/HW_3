@@ -55,5 +55,13 @@ namespace TestsForCalculator
             var actualResult = cm.Counting(transformedExpression);
             Assert.AreEqual(actualResult, expectedResult);
         }
+        [TestMethod]
+        public void Severaloperations()
+        {
+            string inputExpression = "2+2*2/2";
+            string transformedExpression = cm.TransformExpression(inputExpression);
+            var actualResult = cm.Counting(transformedExpression);
+            Assert.AreEqual(actualResult, 4);
+        }
     }
 }
