@@ -71,5 +71,12 @@ namespace TestsForCalculator
             string transformedExpression = cm.SyntaxAnalyz(inputExpression);
             Assert.AreEqual(transformedExpression,"4,3");
         }
+        [TestMethod]
+        public void WrongChar()
+        {
+            string inputExpression = "4a";
+            string transformedExpression = cm.SyntaxAnalyz(inputExpression);
+            Assert.AreEqual(transformedExpression, string.Empty);
+        }
     }
 }
