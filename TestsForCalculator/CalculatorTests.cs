@@ -96,5 +96,13 @@ namespace TestsForCalculator
             var actualResult = cm.Counting(transformedExpression);
             Assert.AreEqual(actualResult, 9,5);
         }
+        [TestMethod]
+        public void ParanthesysAbility()
+        {
+            string inputExpression = "(2+2)*2/2";
+            string transformedExpression = cm.TransformExpression(inputExpression);
+            var actualResult = cm.Counting(transformedExpression);
+            Assert.AreEqual(actualResult, 4);
+        }
     }
 }
