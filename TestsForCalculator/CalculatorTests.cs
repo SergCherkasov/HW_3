@@ -87,5 +87,14 @@ namespace TestsForCalculator
             var actualResult = cm.Counting(transformedExpression);
             Assert.AreEqual(actualResult, 8);
         }
+        [TestMethod]
+        public void DoubleNumbers()
+        {
+            string inputExpression = "8.25 + 1.25";
+            string transformedExpression = cm.SyntaxAnalyz(inputExpression);
+            transformedExpression = cm.TransformExpression(inputExpression);
+            var actualResult = cm.Counting(transformedExpression);
+            Assert.AreEqual(actualResult, 9,5);
+        }
     }
 }
