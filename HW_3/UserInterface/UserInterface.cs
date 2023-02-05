@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW_3.UserInterface
 {
-    internal class UserInterface
+    public class UserInterface
     {
         public void Calculate()
         {
