@@ -14,15 +14,15 @@ namespace TestsForCalculator
 
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
-            
+
 
             UserInterface ui = new UserInterface();
 
             ui.Calculate();
 
-            var result=stringWriter.ToString();
+            var result = stringWriter.ToString();
             Assert.AreEqual(result, "\tWELCOME TO CALCULATOR APP!\r\n\r\nEnter expression:\r\n\r\nResult of Your expression:\r\n9\r\n");
-            
+
         }
     }
 }
